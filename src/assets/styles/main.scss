@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #bcdee7;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+button {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.loader {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__spinner {
+    width: 45px;
+    aspect-ratio: .75;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background:
+      var(--c) 0% 50%,
+      var(--c) 50% 50%,
+      var(--c) 100% 50%;
+    animation: l7 1s infinite linear alternate;
+  }
+}
+
+
+
+.profile {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__card {
+    padding: 20px;
+    background: #fff;
+    max-width: 450px;
+    width: 100%;
+    max-height: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  &__image {
+    width: 120px;
+    max-width: 100%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
+    -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  &__name {
+    font-size: 24px;
+    color: #FF5722;
+  }
+
+  &__email {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__bio {
+    padding: 30px 0px;
+    color: #333333;
+    text-align: center;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__button button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #bcdee7;
+    border: 2px solid #bcdee7;
+    cursor: pointer;
+
+    &:hover {
+      background: #fff;
+    }
+  }
+}
+
+.profile__card {
+
+  & input,
+  & textarea {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #bcdee7;
+    resize: none;
+  }
+}
+
+@keyframes l7 {
+  0% {
+    background-size: 20% 50%, 20% 50%, 20% 50%
+  }
+
+  20% {
+    background-size: 20% 20%, 20% 50%, 20% 50%
+  }
+
+  40% {
+    background-size: 20% 100%, 20% 20%, 20% 50%
+  }
+
+  60% {
+    background-size: 20% 50%, 20% 100%, 20% 20%
+  }
+
+  80% {
+    background-size: 20% 50%, 20% 50%, 20% 100%
+  }
+
+  100% {
+    background-size: 20% 50%, 20% 50%, 20% 50%
+  }
+}
